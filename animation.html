@@ -2,57 +2,10 @@
 
   <html>
     <script>
-      var starX1 = random(180, 220);
-      var starY1 = random(180, 220);
-      var distance1 = dist(starX1, starY1, 200, 200);
-      var dX1 = starX1 - 200;
-      var dY1 = starY1 - 200;
-      var starSize1 = 1;
-      var speed1 = random(6, 8);
-      
-      var starX2 = random(180, 220);
-      var starY2 = random(180, 220);
-      var distance2 = dist(starX2, starY2, 200, 200);
-      var dX2 = starX2 - 200;
-      var dY2 = starY2 - 200;
-      var starSize2 = 1;
-      var speed2 = random(6, 8);
-      
-      void draw() {
-          fill(255, 255, 255);
-          background(0, 0, 0);
-          noStroke();
-          //star1
-          ellipse(starX1, starY1, starSize1, starSize1);
-          starX1 += dX1/distance1*speed1;
-          starY1 += dY1/distance1*speed1;
-          starSize1 += 1/speed1;
-              
-          if(starX1 > 400 || starY1 > 400 || starX1 < 0 || starY1 < 0){
-              starX1 = random(180, 220);
-              starY1 = random(180, 220);
-              distance1 = dist(starX1, starY1, 200, 200);
-              dX1 = starX1 - 200;
-              dY1 = starY1 - 200;
-              starSize1 = 1;
-              speed1 = random(6, 8);
-          }
-          //star2
-          ellipse(starX2, starY2, starSize2, starSize2);
-          starX2 += dX2/distance2*speed2;
-          starY2 += dY2/distance2*speed2;
-          starSize2 += 1/speed2;
-              
-          if(starX2 > 400 || starY2 > 400 || starX2 < 0 || starY2 < 0){
-              starX2 = random(180, 220);
-              starY2 = random(180, 220);
-              distance2 = dist(starX2, starY2, 200, 200);
-              dX2 = starX2 - 200;
-              dY2 = starY2 - 200;
-              starSize2 = 1;
-              speed2 = random(6, 8);
-          }
-          
-      };
+      void setup(){
+        canvasSize(400, 400)
+      }
+      var image1 = getImage();
+      var image2 = getImage();
     </script>
   </html>
